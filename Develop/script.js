@@ -48,7 +48,7 @@ const getRandomEmployee = function (employeesArray) {
 
   function randoomChoice(employeeArray) {
     
-   return = Math.floor(Math.random() * employeesArray.length);
+    let index = Math.floor(Math.random() * employeesArray.length);
 
   }
   
