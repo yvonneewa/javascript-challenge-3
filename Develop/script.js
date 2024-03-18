@@ -2,20 +2,20 @@
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
-const collectEmployees = function () {
-  // TODO: Get user input to create and return an array of employee objects
+ // TODO: Get user input to create and return an array of employee objects
   // first name and last name and salary
   // return an array?
-
-  const employee = [];
+const collectEmployees = function () {
+ 
+  let employee = [];
   let addEmployees = true;
 
   while (addEmployees) {
-    firstName = prompt('Enter employees first name');
-    lastName = prompt('Enter employees last name');
-    salary = prompt('Enter employees salary');
+    let firstName = prompt('Enter employees first name:');
+    let lastName = prompt('Enter employees last name:');
+    let salary = parseFloat(prompt('Enter employees salary:'));
 
-    employees.push({
+    employee.push({
       firstName,
       lastName,
       salary,
@@ -23,38 +23,39 @@ const collectEmployees = function () {
 
     addEmployees = confirm('would you like to add another employee?');
 
-    return employees;
   }
+  console.log(employee)
+  return employee;
 }
 
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
 
-  let totalSalary = 0;
-  for (let index = 0; index < employeesArray.length; index++)
-    sum += employeesArray[index];
+  let sum = 0;
+  for (let index = 0; index < employeesArray.length; index++){
+    sum += employeesArray[index].salary;
+  }
+   let averageSalary = sum / employeesArray.length;
 
-  const average = sum / employeesArray.length;
-
-  console.log(average);
-
-  return average;
+  console.log(averageSalary,"Average Salary");
+console.log(sum,"employeesArray.length");
+  return averageSalary;
 }
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
 
-  function randoomChoice(employeeArray) {
-    
     const randomIndex = Math.floor(Math.random() * employeesArray.length);
 
     const randomElement = employeesArray[randomIndex];
     
     console.log(randomElement);
 
-  }
+    return randomElement;
+
+
   
 
 
