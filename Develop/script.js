@@ -47,19 +47,15 @@ console.log(sum,"employeesArray.length");
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
 
-    const randomIndex = Math.floor(Math.random() * employeesArray.length);
+    let randomIndex = Math.floor(Math.random() * employeesArray.length);
 
-    const randomElement = employeesArray[randomIndex];
+   let randomElement = employeesArray[randomIndex];
     
     console.log(randomElement);
 
     return randomElement;
 
-
-  
-
-
-}
+};
 
 /*
   ====================
